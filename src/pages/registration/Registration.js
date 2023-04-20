@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Style from './Registration.module.css'
 
 
 
 function RegistrationPage() {
+  const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -76,7 +77,7 @@ function RegistrationPage() {
    
     const confirmation = window.confirm('Registration successfully Done! Click OK to go to Login page.');
     if (confirmation) {
-      window.location.href = '/login';
+      navigate('/login');
     }
     }
 
