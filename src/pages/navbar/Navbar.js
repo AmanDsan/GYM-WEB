@@ -9,7 +9,7 @@ export default function Navbar() {
   const [isMobile, setIsMobile] = useState(false)
   const isLogin = JSON.parse(localStorage.getItem('logged'));
   const userName = JSON.parse(localStorage.getItem('users'))
-  console.log(userName.username)
+ //console.log(userName.username)
 
   function handleLogout() {
     localStorage.removeItem('logged')
